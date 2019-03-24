@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title> color-scheme | test </title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/solid.css" integrity="sha384-osqezT+30O6N/vsMqwW8Ch6wKlMofqueuia2H7fePy42uC05rm1G+BUPSd2iBSJL" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+	</head>
+
+<style>
+    html, body {
+      min-width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;  
+      font-size: 16px;
+    }
+    .background {
+      padding:0; margin:0;
+    }
+		.header {
+      font-family: Gerogia;
+			color: #DE5353;
+			text-transform: capitalize;
+		}
+		.p1 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 15px;
+			color: #F5EFE6;
+		}    
+    .wrapper {
+      /* Original: 251E29 */
+      background-color: rgb(33, 30, 36);
+      height: 100%;
+      margin:0;
+      padding:20px;
+      display: block;
+    }
+    .code_box {
+			border-color: #DE5353;
+			border-width: 2px;
+			border-style: solid;
+			margin-left: auto;
+			margin-right: auto;
+			width: 75%;
+			height: 70%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			padding:10px;
+    }
+		.dir_tree_box {
+			border-color: #DE5353;
+			border-width: 2px;
+			border-style: solid;
+			min-width: 15%;
+		}
+		.dir_tree_box ul {
+  	  list-style-type: none;
+			padding-left:0px;
+		}
+		.dir_tree_box ul::after{
+			margin-left: 10px;
+		}
+		.dir_tree_box ul {
+			color: #F5EFE6;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 15px;
+			padding-inline-start: 10px;
+		}
+
+		.dir_tree_box ul.dir_closed::before {
+	    font-family: "Font Awesome 5 Free"; 
+			font-weight: 900; 
+			content: "\f07b";
+			padding-right:5px;
+		}
+		.dir_closed li {
+			display: none;
+		}
+		.dir_closed ul {
+			display: none;
+		}
+		.dir_tree_box ul.dir_open::before {
+	    font-family: "Font Awesome 5 Free"; 
+			font-weight: 900; 
+			content: "\f07c";
+			padding-right:5px;
+		}
+		.dir_open > .doc_test::before {
+		  font-family: "Font Awesome 5 Free"; 
+			font-weight: 900; 
+			content: "\f15b";
+			padding-right:5px; /*for the icon*/
+			padding-left: 10px; /*for the indentation*/
+		}
+		
+	</style>
+	<body>
+    <div class="wrapper">
+        <div class="code_box">
+					<div class="dir_tree_box">
+						<ul>	
+							<ul class="dir_open">1.open
+								<ul class="dir_open">2.open
+									<li class="doc_test">2.visible</li>
+								</ul>
+								<li class="doc_test">1.visible</li>
+							</ul>
+							<ul class="dir_closed">2.closed
+								<ul class="dir_open">2.hidden_dir
+									<li class="doc_test">2.should be hidden</li>
+								</ul>
+								<li class="doc_test">2.hidden</li>
+							</ul>
+						</ul>
+					</div>
+				</div>
+    </div>
+
+	</body>
+</html>

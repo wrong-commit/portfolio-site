@@ -1,0 +1,140 @@
+<title> color-scheme | test </title>
+<%- include font.ejs %>
+<style>
+/*
+c0 : background color
+c1 : border color
+c2 : dir tree seperator 
+c3 : links 
+c4 : code display
+c5 : dir litsing display 
+c6 : icons
+ */
+	html, body {
+		background-color: <%= c0 %>; /* c0 */
+		min-width: 100%;
+		overflow-x:hidden;
+		min-height: 100%;
+		margin: 0 calc(100% - 100vw) 0 0;
+		padding: 0;  
+	}
+	.wrapper {
+		min-height: 100%;
+		background-color: <%= c0 %>; /* c0 */
+		margin:0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.nav_link {
+		text-decoration: underline;
+	}
+	.nav_link:visited {
+		color: <%= c3 %>;
+		text-decoration: underline;
+	}
+	.nav_link:link {
+		color: <%= c3 %>;
+		text-decoration: underline;
+	}
+	.box {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 90%;
+		min-width: 90%;
+		font-family: Roboto;
+	}
+	.small_box {
+		max-width: 30%;
+		min-width: 30%;
+	}
+	.line {
+		margin-left:auto;
+		margin-right:auto;
+		background-color:black; /* c1 */
+		width:90%;
+		height:4px;
+	}
+	.line_box {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: center;
+		padding:5px;
+	}
+	.line_box.reverse {
+		justify-content: flex-end;
+	}
+	.line_box > h2 {
+		padding-right:10px;
+	}
+	.line_box.reverse > h2 {
+		padding-left:10px;
+	}
+	.contact {
+		flex-direction:column;
+		margin-bottom: 20px;
+		padding-left: 20px; 
+	}
+	.info_box {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-evenly;
+		padding:5px;
+		font-family: Roboto; /* FONT */
+	}
+	.info_list {
+		list-style-type: none;
+		padding-left: 0px;
+	}
+	.page_raised {
+		box-shadow: 5px 5px 0px 0px <%= c1 %>; /* c1 */
+		-webkit-box-shadow: 5px 5px 0px 0px <%= c1 %>; /* c1 */
+		-moz-box-shadow: 5px 5px 0px 0px <%= c1 %>; /* c1 */
+
+		border-color: <%= c1 %>; /* c1 */
+		border-width: 2px;
+		border-style: solid;
+		margin-top:15px;
+	}
+	.code_box {
+		line-height: 80%;
+		height:7em;
+		max-height: 80vh;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		padding:20px;
+		transition: all .5s ease-in-out;
+    font-size: 1em;
+	}
+	.button {
+		text-align:center;
+		min-width:11em;
+		padding:8px;
+		margin-top: 0px !important; 
+		transition: all 1s ease;
+	}
+	.email::before  {
+		color: <%= c6 %>; /* c6 */
+		font-family: "Font Awesome 5 Free" !important; 
+		font-weight: 900; 
+		content: "\f1fa";
+		padding-right:5px; /*for the icon*/
+	}
+	.github::before {
+		color: <%= c6 %>; /* c6 */
+		font-family: "Font Awesome 5 Brands" !important;
+		font-weight: 900 !important;
+		content: "\f09b" !important ;
+		padding-right:5px; /*for the icon*/
+	}
+	@media screen and (max-width: 1000px) { /* laptops */
+		.wrapper { justify-content: flex-start }
+	}
+	p {
+		margin:5px;
+	}
+</style>

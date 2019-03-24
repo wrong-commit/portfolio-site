@@ -1,0 +1,40 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "list-github-dir-content": "^1.1.0",
+    "mongoose": "^5.3.6",
+    "walk": "^2.3.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinn-samuel-perry/portfolio-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quinn-samuel-perry/portfolio-site/issues"
+  },
+  "homepage": "https://github.com/quinn-samuel-perry/portfolio-site#readme",
+  "nodemonConfig": {
+    "ignore": [
+      "tests/*",
+      "views/*",
+      "views/partials/*",
+      "views/pages/*"
+    ],
+    "delay": "1"
+  }
+}

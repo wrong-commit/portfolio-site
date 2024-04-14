@@ -25,8 +25,10 @@
                         <h2 class="header">hey</h2>
                         <div class="box" >
                             <p class="text">Thanks for checking out my portfolio.</p>
-                            <p class="text">Check out the section below where I show off my most interesting projects.</p>
-                            <p class="text">This whole page is running in a Docker container on my Raspberry Pi.</p>
+                            <p class="text">Below you can check out my most interesting development projects.</p>
+                            <p class="text">You can see that I'm passionate about IT security, programming systems, and trying out new technology.</p>
+                            <p class="text"><br></p>
+                            <p class="text">PS. This whole page is running in a Docker container on my Raspberry Pi in a shoebox.</p>
                         </p>
                         </div>
                     </div>
@@ -40,11 +42,14 @@
                         <div class="box">
                             <p class="text">
                                 This project was represents an attempt at programming an ORM like Hibernate in Typescript, including Hibernate's annotation system to 
-                                automatically build SQL queries. A parcel tracking system is built on top of this technology. 
+                                automatically build SQL queries, such as automatically populating child entitys using JOIN statements. A parcel tracking system is built on top of this technology. 
                                 </p>
                             <p class="text">
-                                The front end is built in React and Typescript, and the back end parcel tracking system uses a message queue for adding new parcels, with a background cron service to provide
-                                regular resynchronizations with the Auspost Digital API for verified packages.
+                                The front end is built in React and Typescript, my favourite combination. The back end parcel tracking system uses a message queue for adding new parcels with a background cron service to provide
+                                regular resynchronizations with the Auspost API for verified packages.
+                                </p>
+                            <p class="text">
+                                In the /client/ folder is a notification script written in golang. 
                                 </p>
                             <img src="/assets/auspost_screenshot.png" 
                                 style="width: 100%; height: 75%"/>
@@ -58,12 +63,11 @@
                         <xmp id="auspost_document" class="document_display_box">   </xmp>
                     </div>
                     <div class="box line_box" style="flex-direction:column">
-                        <h2 class="header">i love to play around with Malware</h2>
+                        <h2 class="header">i wrote some code to bypass Anti-Virus systems</h2>
                         <div class="box">
                             <p class="text"> 
-                                This is a runtime self-decrypting PE program I wrote using the Win32 API. This program is able to bypass the 
-                            static anaylsis by most anti-virus solutions by decrypting itself on the fly, which is pretty useful in a penetration 
-                            testing scenario. 
+                                Anti Virus systems can't perform virus scans on a self-decrypting EXE files. I wrote this program using the Win32 API to bypass the 
+                            static anaylsis performed by most anti-virus solutions. This program includes some checks for Anti Virus sandboxes, as well as wiping parts of the EXE from system memory.  
                         </p>
                         </div>
                     </div>
@@ -87,7 +91,7 @@
                             javascript into any webpage the user visits with the proxy active.
                             </p>
                             <p class="text"> 
-                            The impact of a project like this nowadays is minor due to the increased education of non-technical users around basic web security and 
+                            The impact of a project like this nowadays is reduced due to the increased education of non-technical users around basic web security and 
                             widespread adoption of HTTPS and HSTS, however this represents the possibilities of SSL interception performed by well resourced attackers.</p>
                         </div>
                     </div>
@@ -103,7 +107,7 @@
             
             <div id="contact" class="box page_raised" style="margin-bottom:20px;">
                 <div class="box line_box" style="flex-direction:column;padding-bottom:20px">
-                    <h2 class="header"> contact me </h2>
+                    <h2 class="header"> contact details </h2>
                     <div class="box">
                         <p class="text email"> 
                             <a class="nav_link" href="mailto:<%=emailAddress%>"> 

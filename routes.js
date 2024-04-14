@@ -8,7 +8,7 @@ module.exports = function(app){
 		const dlName = req.originalUrl.split('/').splice(3).join('/')
 		const repoPath = path.join(__dirname,'repo',req.params.repoName)
 		const dlPath = path.join(repoPath,dlName)
-		console.log(`user requested ${dlPath}`)
+		// console.log(`user requested ${dlPath}`)
 		if(dlPath.substring(0, repoPath.length ) != repoPath){
 			console.log("user tried to directory traversal")
 			res.sendStatus(404)
@@ -20,7 +20,7 @@ module.exports = function(app){
 					console.log(err)
 					res.sendStatus(404)
 				} else {
-					console.log('sending data')
+					// console.log('sending data')
 					res.send(data)
 				}
 				next()
@@ -41,7 +41,6 @@ module.exports = function(app){
 				next()
 			})
 		}else if( req.params.tree == 'proxy'){
-			// res.send( require('./repos').proxy)
 			fs.readFile(__dirname + '/repo/proxy.json', 'utf8',(err,data)=>{
 				if(err) {
 					console.log(err)

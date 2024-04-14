@@ -14,7 +14,7 @@ module.exports = function(app){
 			res.sendStatus(404)
 			next()
 		}else{
-			//res.send() should send a mongodb document
+			//res.send() returns file contents
 			fs.readFile(dlPath, 'utf8',(err,data)=>{
 				if(err) {
 					console.log(err)
@@ -30,24 +30,52 @@ module.exports = function(app){
 
 	app.get('/repo/:tree',(req,res,next)=>{
 		if(req.params.tree == 'cryptor'){
-			res.send( require('./repos').cryptor)
+			fs.readFile(__dirname + '/repo/cryptor.json', 'utf8',(err,data)=>{
+				if(err) {
+					console.log(err)
+					res.sendStatus(404)
+				} else {
+					console.log('sending data')
+					res.send(data)
+				}
+				next()
+			})
 		}else if( req.params.tree == 'proxy'){
-			res.send( require('./repos').proxy)
+			// res.send( require('./repos').proxy)
+			fs.readFile(__dirname + '/repo/proxy.json', 'utf8',(err,data)=>{
+				if(err) {
+					console.log(err)
+					res.sendStatus(404)
+				} else {
+					console.log('sending data')
+					res.send(data)
+				}
+				next()
+			})
+		}else if( req.params.tree == 'auspost'){
+			fs.readFile(__dirname + '/repo/auspost.json', 'utf8',(err,data)=>{
+				if(err) {
+					console.log(err)
+					res.sendStatus(404)
+				} else {
+					console.log('sending data')
+					res.send(data)
+				}
+				next()
+			})
 		}
-		next()
-		//res.send() should send a mongodb document
 	})
 	
 	app.get('/',(req,res,next)=>{
 		//TODO: return array of box objects from db
 		res.render('pages/main.ejs',
 		{
-			title: "quinns portfolio | its super cool",
-			colors: [ "#0acbf1", 
+			title: "quinn's portfolio | its super cool",
+			colors: [ "#f18c0a", 
 								"#000000", 
 								"#020202", 
 								"#020202",
-								"#0acbf1",
+								"#f18c0a",
 								"#000000" ]
 		})
 		next()

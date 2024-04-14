@@ -70,11 +70,11 @@ module.exports = function(app){
 		res.render('pages/main.ejs',
 		{
 			title: "quinn's portfolio | its super cool",
-			colors: [ "#f18c0a", 
+			colors: [ "#0acbf1", 
 								"#000000", 
 								"#020202", 
 								"#020202",
-								"#f18c0a",
+								"#0acbf1",
 								"#000000" ]
 		})
 		next()

@@ -3,6 +3,7 @@
 function init(){
     downloadRepo("cryptor","cryptor_repo","cryptor_document");
     downloadRepo("proxy","proxy_repo","proxy_document");
+    downloadRepo("auspost","auspost_repo","auspost_document");
     // var navButtons = ['about','projects','contact'];
     // var navButtons = [];
     // for(var i=0; i<navButtons.length; i++){

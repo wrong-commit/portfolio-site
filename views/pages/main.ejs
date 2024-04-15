@@ -22,7 +22,7 @@
             <div class="box page_raised">
                 <div id="about">
                     <div class="box line_box" style="flex-direction:column; justify-content:flex-start; padding-bottom:20px">
-                        <h2 class="header">hey</h2>
+                        <h2 class="header">summary</h2>
                         <div class="box" >
                             <p class="text">Thanks for checking out my portfolio.</p>
                             <p class="text">Below you can check out my most interesting development projects.</p>
@@ -38,19 +38,32 @@
                     <div class="box line_box" style="flex-direction:column;">
                         <h2 class="header">Australia Post parcel tracking dashboard</h2>
                         <div class="box">
-                            <p class="text">
-                                This project was represents an attempt at programming an ORM like Hibernate in Typescript, including Hibernate's annotation system to 
-                                automatically build SQL queries, such as automatically populating child entitys using JOIN statements. A parcel tracking system is built on top of this technology. 
-                                </p>
-                            <p class="text">
-                                The front end is built in React and Typescript, my favourite combination. The back end parcel tracking system uses a message queue for adding new parcels with a background cron service to provide
-                                regular resynchronizations with the Auspost API for verified packages.
-                                </p>
-                            <p class="text">
-                                In the /client/ folder is a notification script written in golang. 
-                                </p>
-                            <img src="/assets/auspost_screenshot.PNG" 
-                                style="width: 100%; height: 75%"/>
+
+                            <div class="column">
+                                <div style="margin-right: 1rem">
+                                    <p class="text">
+                                        This project was represents an attempt at programming an ORM like Hibernate in Typescript, including Hibernate's annotation system to 
+                                        automatically build SQL queries, such as automatically populating child entitys using JOIN statements. A parcel tracking system is built on top of this technology. 
+                                    </p>
+                                    <p class="text">
+                                        <br/>
+                                    </p>
+                                    <p class="text">
+                                        The front end is built in React and Typescript, my favourite combination. The back end parcel tracking system uses a message queue for adding new parcels with a background cron service to provide
+                                        regular resynchronizations with the Auspost API for verified packages.
+                                        </p>
+                                    <p class="text">
+                                        <br/>
+                                    </p>
+                                    <p class="text">
+                                        In the /client/ folder is a notification script written in golang that notifies the user whenever the package location changes. 
+                                        </p>
+                                </div>
+                                <img class="img page_raised"
+                                    src="/assets/auspost_screenshot.PNG" 
+                                    style="width: 45vw; height: 50%"/>
+                        </div>
+
                         </div>
                     </div>
                     <div class="box line_box" style="justify-content:space-center">

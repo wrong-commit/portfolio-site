@@ -108,7 +108,7 @@ c6 : icons
 		flex-wrap: nowrap;
 		padding:20px;
 		transition: all .5s ease-in-out;
-    font-size: 1em;
+   	 	font-size: 1em;
 	}
 	.button {
 		text-align:center;
@@ -116,6 +116,17 @@ c6 : icons
 		padding:8px;
 		margin-top: 0px !important; 
 		transition: all 1s ease;
+	}
+	.column { 
+		display:flex;
+		flex-direction: row;
+	}
+	.img { 
+		display: inline;
+	}
+	.img.page_raised { 
+		border: 2px solid <%= c1 %>;
+		box-shadow: 5px 5px 0px 0px <%= c1 %>; /* c1 */
 	}
 	.email::before  {
 		color: <%= c6 %>; /* c6 */
